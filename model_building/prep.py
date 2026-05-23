@@ -40,17 +40,17 @@ Xtrain, Xtest, ytrain, ytest = train_test_split(
 )
 
 # Save locally
-Xtrain.to_csv("tourism_project/data/Xtrain.csv", index=False)
-Xtest.to_csv("tourism_project/data/Xtest.csv", index=False)
-ytrain.to_csv("tourism_project/data/ytrain.csv", index=False)
-ytest.to_csv("tourism_project/data/ytest.csv", index=False)
+Xtrain.to_csv("Xtrain.csv", index=False)
+Xtest.to_csv("Xtest.csv", index=False)
+ytrain.to_csv("ytrain.csv", index=False)
+ytest.to_csv("ytest.csv", index=False)
 
 # Upload files back to Hugging Face dataset repo
 files = [
-    "tourism_project/data/Xtrain.csv",
-    "tourism_project/data/Xtest.csv",
-    "tourism_project/data/ytrain.csv",
-    "tourism_project/data/ytest.csv"
+    "Xtrain.csv",
+    "Xtest.csv",
+    "ytrain.csv",
+    "ytest.csv"
 ]
 
 for file_path in files:
