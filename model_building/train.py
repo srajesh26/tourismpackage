@@ -56,7 +56,6 @@ categorical_features = [
         'MaritalStatus',             # Marital status of the customer (Single, Married, Divorced)
         'ProductPitched',            # Type of product pitched to the customer
         'Designation',               # Customer's designation in their current organization
-        'ProdTaken',                 # Target variable indicating whether the customer has purchased a package (0: No, 1: Yes)
         'CityTier'                   # City category based on development, population, and living standards (Tier 1 > Tier 2 > Tier 3)
         ]
 
