@@ -11,7 +11,7 @@ model = joblib.load(model_path)
 
 # Streamlit UI for Customer Churn Prediction
 st.title("Tourism Package Prediction App")
-st.write("The Tourism Package Prediction App is an internal tool for the travel company staff that predicts whether customer will purchase the newly introduced Wellness Tourism Package before contacting them.")
+st.write("The Tourism Package Prediction App is an internal tool for the travel company staff to predict whether customer will purchase the newly introduced Wellness Tourism Package before contacting them.")
 st.write("Kindly enter the customer details to check whether they are likely to buy the newly introduced tourism wellness package.")
 
 # Collect user input based on dataset dictionary

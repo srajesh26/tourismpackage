@@ -3,14 +3,18 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import make_column_transformer
 from sklearn.pipeline import make_pipeline
+
 # for model training, tuning, and evaluation
 import xgboost as xgb
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score, classification_report, recall_score
+
 # for model serialization
 import joblib
+
 # for creating a folder
 import os
+
 # for hugging face space authentication to upload files
 from huggingface_hub import login, HfApi, create_repo
 from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
@@ -75,11 +79,11 @@ xgb_model = xgb.XGBClassifier(scale_pos_weight=class_weight, random_state=42)
 # Define hyperparameter grid
 param_grid = {
     'xgbclassifier__n_estimators': [50, 75, 100, 125, 150],    # number of tree to build
-    'xgbclassifier__max_depth': [2, 3, 4],    # maximum depth of each tree
-    'xgbclassifier__colsample_bytree': [0.4, 0.5, 0.6],    # percentage of attributes to be considered (randomly) for each tree
-    'xgbclassifier__colsample_bylevel': [0.4, 0.5, 0.6],    # percentage of attributes to be considered (randomly) for each level of a tree
-    'xgbclassifier__learning_rate': [0.01, 0.05, 0.1],    # learning rate
-    'xgbclassifier__reg_lambda': [0.4, 0.5, 0.6],    # L2 regularization factor
+    'xgbclassifier__max_depth': [2, 3, 4],                     # maximum depth of each tree
+    'xgbclassifier__colsample_bytree': [0.4, 0.5, 0.6],        # percentage of attributes to be considered (randomly) for each tree
+    'xgbclassifier__colsample_bylevel': [0.4, 0.5, 0.6],       # percentage of attributes to be considered (randomly) for each level of a tree
+    'xgbclassifier__learning_rate': [0.01, 0.05, 0.1],         # learning rate
+    'xgbclassifier__reg_lambda': [0.4, 0.5, 0.6],              # L2 regularization factor
 }
 
 # Model pipeline
